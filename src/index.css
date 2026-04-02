@@ -1,7 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+.light-reveal {
+  clip-path: circle(150% at var(--x, 100%) var(--y, 0%));
+}
+
+.dark-reveal {
+  animation: revealDark 0.6s ease forwards;
+}
+
+.light-reveal {
+  animation: revealLight 0.6s ease forwards;
+}
+
+@keyframes revealDark {
+  0% {
+    clip-path: circle(0% at var(--x) var(--y));
+  }
+  100% {
+    clip-path: circle(150% at var(--x) var(--y));
+  }
+}
+
+/* @keyframes revealLight {
+  0% {
+    clip-path: circle(150% at var(--x) var(--y));
+  }
+  100% {
+    clip-path: circle(0% at var(--x) var(--y));
+  }
+} */
+ /* Hide scrollbar for Chrome, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE/Edge */
 body {
-  @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white;
+  -ms-overflow-style: none;
 }
