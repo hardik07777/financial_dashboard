@@ -1,16 +1,174 @@
-# React + Vite
+#  Finance Dashboard UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean and interactive **Finance Dashboard** built to visualize financial data, manage transactions, and derive meaningful insights — all within a responsive and user-friendly interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Overview
 
-## React Compiler
+This project simulates a finance tracking dashboard where users can:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* View overall financial summary
+* Explore and filter transactions
+* Understand spending patterns through charts
+* Switch roles to experience different UI behaviors
 
-## Expanding the ESLint configuration
+The focus of this project is on **frontend architecture, UI/UX design, and state management**, rather than backend complexity.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Features
+
+###  Dashboard Overview
+
+* Summary cards for:
+
+  * Total Balance
+  * Total Income
+  * Total Expenses
+* Time-based visualization (Line Chart)
+* Category-based visualization (Pie Chart)
+
+---
+
+### 📄 Transactions Section
+
+* Displays:
+
+  * Date
+  * Amount
+  * Category
+  * Type (Income / Expense)
+
+* Functionalities:
+
+  *  Search transactions
+  *  Filter by type
+  *  Responsive table
+
+---
+
+###  Role-Based UI (Simulated)
+
+* **Viewer**
+
+  * Can only view data
+
+* **Admin**
+
+  * Can add transactions
+  * Enhanced interaction access
+
+* Role switching via dropdown for demonstration
+
+
+###  Insights Section
+
+* Highest spending category
+* Basic financial observations
+* Helps users understand spending behavior
+
+---
+
+###  Dark Mode
+
+* Toggle between light and dark themes
+* Fully responsive styling
+
+
+
+###  Data Persistence
+
+* Transactions and theme preferences stored in **localStorage**
+
+
+
+##  Tech Stack
+
+* **Frontend:** React (Vite)
+* **Styling:** Tailwind CSS
+* **Charts:** Recharts
+* **State Management:** Zustand
+
+---
+
+##  Project Structure
+
+```
+src/
+ ├── components/
+ │    ├── cards/
+ │    ├── charts/
+ │    ├── transactions/
+ │    ├── layout/
+ │
+ ├── data/
+ ├── pages/
+ ├── store/
+ ├── utils/
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
+
+##  Installation & Setup
+
+1. Clone the repository:
+
+bash
+git clone <your-repo-link>
+cd finance-dashboard
+
+2. Install dependencies:
+
+bash
+npm install
+
+3. Run the project:
+
+bash
+npm run dev
+
+---
+
+##  Responsiveness
+
+The dashboard is fully responsive and works across:
+
+* Desktop
+* Tablet
+* Mobile devices
+
+
+##  Design Decisions
+
+* Focused on **clean UI and readability**
+* Used **modular components** for scalability
+* Chose **Zustand** for simple and efficient state management
+* Implemented **mock data** to simulate real-world usage
+* Prioritized **user experience and clarity over complexity**
+
+
+##  Future Enhancements
+
+* Export transactions (CSV/JSON)
+* Advanced filtering and grouping
+* Backend integration (API)
+* Authentication and real RBAC
+* Animations using Framer Motion
+
+---
+
+##  Notes
+
+This project was built as part of a frontend evaluation assignment.
+The goal was to demonstrate problem-solving approach, UI structuring, and interaction design.
+
+
+##  Author
+
+Hardik Goel
+
+
+
